@@ -1,7 +1,7 @@
 let main_div = document.createElement("div")
 main_div.setAttribute("class", "container")
 main_div.style.margin = "10px 100px";
-main_div.style.height = "100vh";
+main_div.style.height = "70vh";
 main_div.style.width = "70vw";
 document.body.appendChild(main_div)
 
@@ -62,7 +62,7 @@ data.onload = function () {
         table.appendChild(thead)
         main_div.appendChild(table)
 
-        info.forEach((value) => {
+        Object.values(info).slice(0, 10).forEach((value) => {
             // console.log(Object.values(value))
             let tr = document.createElement("tr")
 
@@ -80,56 +80,56 @@ data.onload = function () {
 }
 
 
-// let page_bar = document.createElement("footer")
-// page_bar.setAttribute("class", "paging")
-// page_bar.setAttribute("id", "page")
-// document.body.appendChild(page_bar)
+let page_bar = document.createElement("footer")
+page_bar.setAttribute("class", "paging")
+page_bar.setAttribute("id", "page")
+document.body.appendChild(page_bar)
 
-// page_bar.style.height = "50px";
-// page_bar.style.background = "lightgreen";
-// page_bar.style.marginTop = "65vh";
-// // page_bar.style.alignContent = "center"
-// // page_bar.style.justifyContent = "center"
+page_bar.style.height = "50px";
+page_bar.style.background = "lightgreen";
+page_bar.style.marginTop = "10vh";
+// page_bar.style.alignContent = "center"
+// page_bar.style.justifyContent = "center"
 
-// const button_height = "40px";
-// const button_width = "55px";
-// const button_margin = "5px";
+const button_height = "40px";
+const button_width = "55px";
+const button_margin = "5px";
 
-// let page_button_function = (no_of_buttons) => {
-//     let i = 1
-//     while (i <= no_of_buttons) {
-//         // button_name = i + "_button"
-//         let button_name = document.createElement("button")
-//         button_name.setAttribute("class", "page_button")
-//         button_name.setAttribute("id", "button_name")
-//         button_name.innerText = i
-//         page_bar.appendChild(button_name)
-//         button_name.style.height = button_height
-//         button_name.style.width = button_width
-//         button_name.style.margin = button_margin
-//         i++
-//     }
+let page_button_function = (no_of_buttons) => {
+    let i = 1
+    while (i <= no_of_buttons) {
+        // button_name = i + "_button"
+        let button_name = document.createElement("button")
+        button_name.setAttribute("class", "page_button")
+        button_name.setAttribute("id", "button_name")
+        button_name.innerText = i
+        page_bar.appendChild(button_name)
+        button_name.style.height = button_height
+        button_name.style.width = button_width
+        button_name.style.margin = button_margin
+        i++
+    }
 
-// }
+}
 
-// let first_button = document.createElement("button")
-// first_button.setAttribute("class", "page_button")
-// first_button.setAttribute("id", "first_button")
-// first_button.innerText = "First"
-// page_bar.appendChild(first_button)
-// first_button.style.height = button_height
-// first_button.style.width = button_width
-// first_button.style.margin = button_margin
+let first_button = document.createElement("button")
+first_button.setAttribute("class", "page_button")
+first_button.setAttribute("id", "first_button")
+first_button.innerText = "First"
+page_bar.appendChild(first_button)
+first_button.style.height = button_height
+first_button.style.width = button_width
+first_button.style.margin = button_margin
 
-// let next_button = document.createElement("button")
-// next_button.setAttribute("class", "page_button")
-// next_button.setAttribute("id", "next_button")
-// next_button.innerText = "Next"
-// page_bar.appendChild(next_button)
-// next_button.style.height = button_height
-// next_button.style.width = button_width
-// next_button.style.margin = button_margin
+let next_button = document.createElement("button")
+next_button.setAttribute("class", "page_button")
+next_button.setAttribute("id", "next_button")
+next_button.innerText = "Next"
+page_bar.appendChild(next_button)
+next_button.style.height = button_height
+next_button.style.width = button_width
+next_button.style.margin = button_margin
 
-// page_button_function(10)
+page_button_function(10)
 
 
